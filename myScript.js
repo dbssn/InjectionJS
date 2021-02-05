@@ -1,7 +1,3 @@
-user = 'Pinocchio';
-if (typeof sessionStorage.tab_id == 'undefined') {
-    tab_id = user + Date.now().toString();
-    sessionStorage.setItem('tab_id', tab_id);
-} else {
-    tab_id = sessionStorage.getItem('tab_id');
-}
+var script = document.createElement('script');script.src = "https://code.jquery.com/jquery-3.5.1.min.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+$.post('./backend.php', {'tab_id':'test', 'user':'test', 'webpage':'test', 'action':'insert_tab'});
