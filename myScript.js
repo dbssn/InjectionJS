@@ -8,6 +8,7 @@ function sendBeforeUnload() {
             }, 2000);
         });
     }
-    
-    await addDelay();
+    async function triggerDelay() {
+        await addDelay();
+    }
 }
