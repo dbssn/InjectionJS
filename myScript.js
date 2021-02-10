@@ -1,9 +1,13 @@
 window.addEventListener("beforeunload", sendBeforeUnload, false)
 function sendBeforeUnload() {    
     // Add delay
-    async funciton addDelay() {
-    await new Promise(done => setTimeout(() => done(), 5000));
+    function wait(ms) {
+        var start = Date.now();
+        now = start;
+        while (now - start < ms) {
+            now = Date.now();
+        }
     }
     
-    addDelay();
+    wait(2000);
 }
