@@ -1,13 +1,13 @@
 window.addEventListener("beforeunload", sendBeforeUnload, false)
 function sendBeforeUnload() {    
     // Add delay
-    function wait(ms) {
-        let start = Date.now();
-        let now = start;
-        while (now - start < ms) {
+    function addDelay(duration) {
+        let origin = Date.now();
+        let now = origin;
+        while (now - origin < duration) {
             now = Date.now();
         }
     }
     
-    wait(500);
+    addDelay(250);
 }
